@@ -1,3 +1,4 @@
+from random import shuffle
 class Hand:
     def __init__(self, name):
         # имя игрока
@@ -85,7 +86,7 @@ def new_game():
     in_game = True
     # набирать карты игроку имеет смысл только если у него на руке меньше 21 очка
     while player_hand.get_value() < 21:
-        ans = raw_input('Hit or stand? (h/s) ')
+        ans = input('Hit or stand? (h/s) ')
         if ans == "s":
             print("You stopped")
             break
