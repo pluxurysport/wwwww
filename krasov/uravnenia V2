@@ -1,0 +1,30 @@
+import math
+print("Введите a,b,с для уравнения: ax^2+bx+c")
+a=float(input("Введите a:"))
+b=float(input("Введите b:"))
+c=float(input("Введите c:"))
+if a>0:
+   print("у=",a,'*x^2+',b,'x','+',c)
+else:
+   if a==0:
+      print("Уравнение: у=",b,'x','+',c,"не является квадратным")
+    
+d=b*b-4*a*c
+if d==b*b:
+    print("Проверьте введеные денные")
+else:
+   if d<0:
+      print("Решений нет!")
+   else:
+       if d==0:
+          x1=(-b+math.sqrt(d))/(2*a)
+          print("D=",d)
+          print("x1=x2=",x1)
+       else:
+          x1=(-b+math.sqrt(d))/(2*a)
+          x2=(-b-math.sqrt(d))/(2*a)
+          print("Дискриминант=",d)
+          print("Ответ:")
+          print("x1=",x1)
+          print("x2=",x2)
+print('Конец!')
